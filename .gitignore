@@ -1,0 +1,35 @@
+# Python specific
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+*.venv
+env/
+venv/
+ENV/
+VENV/
+*.egg
+*.egg-info/
+dist/
+build/
+*.wheel
+
+# FastAPI specific
+*.log
+*.sqlite3
+instance/
+*.db
+
+# IDE specific
+.vscode/
+.idea/
+*.swp
+*.swo
+*.swn
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+fastapiadso/

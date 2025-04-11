@@ -1,0 +1,9 @@
+# Ignorar carpetas y archivos de caché
+fastapiadso/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.cache/
+*.log
+*.tmp
