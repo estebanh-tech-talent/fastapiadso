@@ -18,3 +18,14 @@ class Item(BaseModel):
 
     class Config:
         orm_mode = True
+
+
+class Student(BaseModel):
+    id: int
+    name: str
+    last_name: str
+    email: str
+    student_record: int
+
+    class Config:
+        orm_mode = True

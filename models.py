@@ -19,3 +19,13 @@ class Item(Base):
     name = Column(String(100), index=True)
     description = Column(String(250))
     price = Column(Float)
+
+
+class Student(Base):
+    __tablename__ = "students"
+
+    id = Column(Integer, primary_key=True, index=True, autoincrement=True)
+    name = Column(String(100), index=True)
+    last_name = Column(String(100), index=True)
+    email = Column(String(100), unique=True, index=True)
+    student_record = Column(Integer, index=True)
