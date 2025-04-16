@@ -9,7 +9,7 @@ DB_HOST = os.getenv("MYSQLHOST")
 DB_PORT = os.getenv("MYSQLPORT")
 DB_NAME = os.getenv("MYSQLDATABASE")
 
-ENV_FLAG = os.getenv("FLAG")
+ENV_FLAG = os.getenv("ENV_FLAG")
 
 DATABASE_URL = f"mysql+pymysql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
 
