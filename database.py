@@ -3,13 +3,6 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-# DATABASE_URL = "mysql+pymysql://root:password@localhost:3306/cubo"
-# DATABASE_URL = "mysql+pymysql://root:adso_2025*@172.17.0.2:3306/cubo"
-# DATABASE_URL = "mysql+pymysql://root:adso_2025@192.168.1.7:3366/cubo"
-# DATABASE_URL = "mysql+pymysql://root:VDxMquhRcllksfDLacoaWTRLmQxMssfD@mainline.proxy.rlwy.net:26400/cubo"
-
-# DATABASE_URL = "mysql+pymysql://root:VDxMquhRcllksfDLacoaWTRLmQxMssfD@mysql.railway.internal:3306/cubo"
-
 DB_USER = os.getenv("MYSQLUSER")
 DB_PASSWORD = os.getenv("MYSQLPASSWORD")
 DB_HOST = os.getenv("MYSQLHOST")
