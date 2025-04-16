@@ -1,11 +1,11 @@
 from typing import Union, List
+from dotenv import load_dotenv
 from fastapi import FastAPI, Depends, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 
 import models, schemas
 from database import SessionLocal, engine
-
 
 # from . import models, schemas
 # from .database import SessionLocal, engine
