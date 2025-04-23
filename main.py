@@ -2,6 +2,7 @@ from typing import Union, List
 from dotenv import load_dotenv
 from fastapi import FastAPI, Depends, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import RedirectResponse
 from sqlalchemy.orm import Session
 
 import models, schemas
@@ -13,6 +14,16 @@ from database import SessionLocal, engine
 models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
+
+
+@app.middleware("http")
+async def redirect_to_https(request, call_next):
+    if request.url.scheme != "https":
+        url = request.url.replace(scheme="https")
+        return RedirectResponse(url)
+    response = await call_next(request)
+    return response
+
 
 app.add_middleware(
     CORSMiddleware,
