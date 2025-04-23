@@ -15,16 +15,6 @@ models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
-
-@app.middleware("http")
-async def redirect_to_https(request, call_next):
-    if request.url.scheme != "https":
-        url = request.url.replace(scheme="https")
-        return RedirectResponse(url)
-    response = await call_next(request)
-    return response
-
-
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
